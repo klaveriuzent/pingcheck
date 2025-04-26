@@ -24,9 +24,15 @@ body {
     box-sizing: border-box;
 }
 
-.sidebar h1 {
-    font-size: 24px;
-    margin-bottom: 30px;
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 270px;
+    height: 100vh;
+    background-color: #f0f0f0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar input[type="file"] {
@@ -43,7 +49,6 @@ body {
     /* Pastikan tidak melebihi lebar */
 }
 
-
 .sidebar input[type="file"]:hover {
     background-color: #bde1f4;
 }
@@ -56,7 +61,6 @@ body {
     box-sizing: border-box;
 }
 
-/* Card Styling */
 .ping-section {
     background-color: #333;
     color: #f0f0f0;
@@ -88,8 +92,50 @@ body {
     cursor: pointer;
 }
 
+.ping-section .copy-btn:hover {
+    background-color: #baa100;
+}
+
+.ping-section .copy-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #d4b800;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .ping-section .refresh-btn:hover {
     background-color: #0079a1;
+}
+
+.button-group {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.ping-section .refresh-btn,
+.ping-section .copy-btn {
+    position: static;
+}
+
+.network-info {
+    margin-top: auto;
+    font-size: 0.9em;
+    background: #dfdfdf;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.network-info span {
+    color: #0079a1;
+    font-size: 0.8em;
 }
 
 pre {
